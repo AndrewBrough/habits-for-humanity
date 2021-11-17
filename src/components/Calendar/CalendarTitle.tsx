@@ -4,7 +4,14 @@ import { format } from "date-fns";
 import { FC } from "react";
 import { useCalendarContext } from "./useCalendarContext";
 
-const calenderTitle = css``;
+const calenderTitle = css`
+  display: flex;
+  justify-content: space-between;
+`;
+
+const title = css`
+  margin-right: auto;
+`;
 
 const CalendarTitle: FC = (props) => {
   const { date, setDate } = useCalendarContext()!;
@@ -17,8 +24,8 @@ const CalendarTitle: FC = (props) => {
 
   return (
     <div css={calenderTitle} {...props}>
+      <h4 css={title}>{format(date, "MMMM")}</h4>
       <button onClick={() => onMonthChange(-1)}>{`<`}</button>
-      <h4>{format(date, "MMMM")}</h4>
       <button onClick={() => onMonthChange(1)}>{`>`}</button>
     </div>
   );
