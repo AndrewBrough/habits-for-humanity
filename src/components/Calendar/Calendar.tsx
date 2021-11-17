@@ -12,23 +12,10 @@ const calendar = css`
 `;
 
 /**
- * A UI only calendar.
- * Renders a calendar and places the days of the current month in the appropriate day of the week
- * @param props
- * @returns
- *
+ * Renders a calendar and places the days of the current month in the appropriate day of the week.
+ * Provides data about the set date to child components
  */
 export const Calendar: FC = (props) => {
-  // const renderDays = () =>
-  //   new Array(getDaysInMonth()).fill("").map((d, i) => {
-  //     const dayOfMonth = i + 1; // ALERTALERTALERTALERT this is important to get the non 0 indexed day of the month
-  //     return (
-  //       <div key={`dayOfMonth-${dayOfMonth}`} css={dayOfMonth}>
-  //         {dayOfMonth}
-  //       </div>
-  //     );
-  //   });
-
   return (
     <CalendarProvider>
       <CalendarTitle />
