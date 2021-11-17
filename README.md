@@ -1,3 +1,26 @@
+# Habits for Humanity
+
+How can we help humans be happier, healthier, and overall better? This project is a starting point to how we can help people live better lives and maintain better mental health. Less stress, stay organized, achieve goals and feel more secure in the world.
+
+How are we going to do this? Start with the basics. A goal tracking and habit forming app. Sure, it's been done countless times. This is a prototype for a platform we can build from.
+
+Habits for Humanity is meant to be the simplest form of a way to measure yourself - your mood and physical things you're doing in the world. Drinking water, eating meals, working out, happiness levels are all examples of basics you should be able to track here.
+
+## 2 Main Actions
+1. Enter events and trackers
+From a calendar view, you can enter events on specific days and measure trackers.
+
+Events are unique.
+eg. "Today I had a huge presentation at work and totally bombed it."
+
+Trackers are a recurring tally of measurements.
+eg. "Mood: Terrible. Water: Hardly any. Food: Ate a brownie, I think."
+
+2. Report on events and trackers
+You should be able to see at a high level how you're doing in a week - from the calendar view. Colour coding is absolutely necessary and the mood/quality of a day should be visible as soon as you open the app.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

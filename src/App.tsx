@@ -1,12 +1,9 @@
 import { FC } from "react";
-import { ExampleButton } from "./components/ExampleButton/ExampleButton";
+import { Pages } from "./pages/Pages";
 
 const App: FC = () => {
   return (
-    <div>
-      <header>Habits for Humanity</header>
-      <ExampleButton>example button</ExampleButton>
-    </div>
+    <Pages/>
   );
 };
 
