@@ -13,25 +13,15 @@ const CalendarDays: FC = (props) => {
    * Takes the calendar tile index and returns the date expected on that tile
    * @param calendarTileIndex
    * @returns date of month text to render in a calendar tile, should align with the day of week/calendar tile index
+   * eg. given 5 (friday tile), return 1 if the first is a friday
    */
   const getDayOfMonth = (calendarTileIndex: number) => {
-    const tileIndexMinusTitleRow = calendarTileIndex - 7; // exclude the title row
-
+    const tileIndex = calendarTileIndex - 7; // exclude the title row
     const date = new Date();
     date.setMonth(date.getMonth());
     date.setDate(1);
     const firstDayOfWeek = date.getDay();
-    // eg first is a 1:monday, return monday as 1
-    const firstDayOfMonthOffset = (tileIndexMinusTitleRow % 7) - firstDayOfWeek;
-    console.log({
-      date,
-      firstDayOfWeek,
-      tileIndexMinusTitleRow,
-      firstDayOfMonthOffset,
-    });
-    return tileIndexMinusTitleRow < 0
-      ? tileIndexMinusTitleRow + firstDayOfMonthOffset
-      : tileIndexMinusTitleRow;
+    return tileIndex - firstDayOfWeek + 1;
   };
 
   /**
