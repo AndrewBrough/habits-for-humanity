@@ -13,6 +13,11 @@ const title = css`
   margin-right: auto;
 `;
 
+const btn = css`
+  padding: 1rem;
+  margin-left: 1rem;
+`;
+
 const CalendarTitle: FC = (props) => {
   const { date, setDate } = useCalendarContext()!;
 
@@ -25,8 +30,8 @@ const CalendarTitle: FC = (props) => {
   return (
     <div css={calenderTitle} {...props}>
       <h4 css={title}>{format(date, "MMMM")}</h4>
-      <button onClick={() => onMonthChange(-1)}>{`<`}</button>
-      <button onClick={() => onMonthChange(1)}>{`>`}</button>
+      <button css={btn} onClick={() => onMonthChange(-1)}>{`<`}</button>
+      <button css={btn} onClick={() => onMonthChange(1)}>{`>`}</button>
     </div>
   );
 };
