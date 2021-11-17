@@ -4,7 +4,7 @@ import { FC } from "react";
 
 const calendarDay = css`
   height: calc(100vw / 7);
-  &:nth-child(2n + 1) {
+  &:nth-of-type(2n + 1) {
     background: whitesmoke;
   }
 `;
