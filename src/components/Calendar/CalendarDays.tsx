@@ -8,7 +8,7 @@ import { useCalendarContext } from "./useCalendarContext";
 const calendarDays = css``;
 
 const CalendarDays: FC = (props) => {
-  const { date } = useCalendarContext();
+  const { date } = useCalendarContext()!;
   /**
    * Takes the calendar tile index and returns the date expected on that tile
    * @param calendarTileIndex
@@ -17,11 +17,17 @@ const CalendarDays: FC = (props) => {
    */
   const getDayOfMonth = (calendarTileIndex: number) => {
     const tileIndex = calendarTileIndex - 7; // exclude the title row
-    const date = new Date();
-    date.setMonth(date.getMonth());
-    date.setDate(1);
-    const firstDayOfWeek = date.getDay();
-    return tileIndex - firstDayOfWeek + 1;
+
+    const d = new Date(date);
+    d.setMonth(date.getMonth());
+    d.setDate(1);
+    const firstDayOfWeek = d.getDay();
+    const calendarDay = tileIndex - firstDayOfWeek + 1;
+
+    d.setMonth(date.getMonth() + 1);
+    d.setDate(0);
+    const lastOfMonth = d.getDate();
+    return calendarDay > 0 && calendarDay <= lastOfMonth ? calendarDay : "";
   };
 
   /**
@@ -39,7 +45,7 @@ const CalendarDays: FC = (props) => {
    * @returns an array of react elements, one for each square in the calendar layout
    */
   const renderDaySquares = () => {
-    return new Array(6 * 8).fill("").map((d, i) => {
+    return new Array(6 * 8 + 1).fill("").map((d, i) => {
       const key = `calendarDay-${i}`;
       return <CalendarDay key={key}>{getDayText(i)}</CalendarDay>;
     });

@@ -1,20 +1,20 @@
-import { createContext, FC, useContext } from "react";
+import { createContext, FC, useContext, useState } from "react";
 
 interface CalendarContextProps {
   date: Date;
+  setDate: (date: Date) => void;
 }
 
-const defaultCalendarContextProps: CalendarContextProps = {
-  date: new Date(),
-};
-
-const CalendarContext = createContext<CalendarContextProps>(
-  defaultCalendarContextProps
-);
+const CalendarContext = createContext<CalendarContextProps | null>(null);
 
 const CalendarProvider: FC = ({ children }) => {
+  const [date, setDate] = useState(new Date());
+  const defaultValue: CalendarContextProps = {
+    date,
+    setDate,
+  };
   return (
-    <CalendarContext.Provider value={defaultCalendarContextProps}>
+    <CalendarContext.Provider value={defaultValue}>
       {children}
     </CalendarContext.Provider>
   );
