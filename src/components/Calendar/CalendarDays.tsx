@@ -5,8 +5,6 @@ import { getDayOfMonth, shortWeekDaysArray } from "../../helpers/date.helpers";
 import { CalendarDay } from "./CalendarDay";
 import { useCalendarContext } from "./useCalendarContext";
 
-const calendarDays = css``;
-
 const CalendarDays: FC = (props) => {
   const { date } = useCalendarContext()!;
 
