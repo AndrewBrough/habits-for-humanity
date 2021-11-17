@@ -1,5 +1,3 @@
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
 import { FC } from "react";
 import { getDayOfMonth, shortWeekDaysArray } from "../../helpers/date.helpers";
 import { CalendarDay } from "./CalendarDay";
