@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import { css, Interpolation, Theme } from "@emotion/react";
+import { css } from "@emotion/react";
 import { FC } from "react";
 import { resets } from "../../styles/resets";
 

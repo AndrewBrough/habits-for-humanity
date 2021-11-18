@@ -3,11 +3,11 @@ import { css } from "@emotion/react";
 import { FC } from "react";
 
 const mainLayout = css`
-  font-family: "Roboto Slab", serif;
   font-size: 16px;
   padding: 1rem;
   * {
     box-sizing: border-box;
+    font-family: "Roboto Slab", serif;
   }
 `;
 

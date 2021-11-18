@@ -2,21 +2,29 @@
 import { css } from "@emotion/react";
 import { format } from "date-fns";
 import { FC } from "react";
+import { resets } from "../../styles/resets";
 import { useCalendarContext } from "./useCalendarContext";
 
 const calenderTitle = css`
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-around; */
   margin-bottom: 1rem;
+  margin-top: 1rem;
 `;
 
 const title = css`
-  margin-right: auto;
+  display: inline-block;
+  margin: 0;
+  min-width: 5.2rem;
 `;
 
 const btn = css`
-  padding: 1rem;
-  margin-left: 1rem;
+  ${resets.button.unstyled}
+  display: inline-block;
+  padding: 0.6rem;
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  line-height: 0;
 `;
 
 const CalendarTitle: FC = (props) => {
