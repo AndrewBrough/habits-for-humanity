@@ -7,6 +7,7 @@ import { useCalendarContext } from "./useCalendarContext";
 const calenderTitle = css`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 `;
 
 const title = css`

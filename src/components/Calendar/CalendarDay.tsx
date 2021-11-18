@@ -6,9 +6,6 @@ const calendarDay = css`
   height: calc(100vw / 7 - 0.125rem);
   background: white;
   padding: 0.5rem;
-  /* &:nth-of-type(2n + 1) {
-    background: whitesmoke;
-  } */
   box-sizing: border-box;
 `;
 

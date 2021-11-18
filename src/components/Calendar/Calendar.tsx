@@ -10,16 +10,12 @@ const calendar = css`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 2px;
+  gap: 1px;
   background: ${colors.primary};
-  border: 2px solid ${colors.primary};
+  border: 1px solid ${colors.primary};
   box-sizing: border-box;
 `;
 
-/**
- * Renders a calendar and places the days of the current month in the appropriate day of the week.
- * Provides data about the set date to child components
- */
 export const Calendar: FC = (props) => {
   return (
     <CalendarProvider>
