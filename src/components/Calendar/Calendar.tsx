@@ -8,6 +8,10 @@ import { CalendarDays } from "./CalendarDays";
 import { CalendarTitle } from "./CalendarTitle";
 import { CalendarProvider } from "./useCalendarContext";
 
+const calendarWrapper = css`
+  max-width: 50rem;
+`;
+
 const calendar = css`
   width: 100%;
   display: grid;
@@ -22,9 +26,11 @@ const calendar = css`
 export const Calendar: FC = (props) => {
   return (
     <CalendarProvider>
-      <CalendarTitle />
-      <section css={calendar} {...props}>
-        <CalendarDays />
+      <section css={calendarWrapper}>
+        <CalendarTitle />
+        <div css={calendar} {...props}>
+          <CalendarDays />
+        </div>
       </section>
       <ExpandedDate />
     </CalendarProvider>

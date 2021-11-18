@@ -8,13 +8,15 @@ import { useCalendarContext } from "./useCalendarContext";
 const calendarDay = css`
   ${resets.button.unstyled};
 
-  height: calc(100vw / 7 - 0.125rem);
+  height: calc(100vw / 7 - 0.35rem);
+  max-height: calc(50rem / 7 - 0.35rem);
   background: white;
   padding: 0.5rem;
   transform: scale(1) !important;
 `;
 
 const expandableDay = css`
+  cursor: pointer;
   &:hover,
   &:focus {
     ${shadows.paperShadow};

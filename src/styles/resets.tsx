@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { borders } from "./borders";
 
 export const resets = {
   button: {
