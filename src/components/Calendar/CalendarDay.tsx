@@ -11,7 +11,6 @@ const calendarDay = css`
   height: calc(100vw / 7 - 0.125rem);
   background: white;
   padding: 0.5rem;
-  /* border-radius: 0.5rem; */
 
   &:hover,
   &:focus {

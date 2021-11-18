@@ -19,7 +19,9 @@ export const resets = {
         transform: scale(1.1);
       }
       &:active {
-        transform: scale(0.9);
+        && {
+          transform: scale(0.9);
+        }
       }
     `,
   },
