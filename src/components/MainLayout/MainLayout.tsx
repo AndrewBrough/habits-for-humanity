@@ -6,6 +6,9 @@ const mainLayout = css`
   font-family: "Roboto Slab", serif;
   font-size: 16px;
   padding: 1rem;
+  * {
+    box-sizing: border-box;
+  }
 `;
 
 const MainLayout: FC = (props) => {

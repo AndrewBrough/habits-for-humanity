@@ -14,7 +14,12 @@ const CalendarDays: FC = (props) => {
   const renderDaySquares = () => {
     return new Array(6 * 8 + 1).fill("").map((d, i) => {
       const key = `calendarDay-${i}`;
-      return <CalendarDay key={key}>{getDayText(i)}</CalendarDay>;
+      const dateText = getDayText(i);
+      return (
+        <CalendarDay key={key} day={dateText as number}>
+          {dateText}
+        </CalendarDay>
+      );
     });
   };
 
