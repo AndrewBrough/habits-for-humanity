@@ -49,7 +49,7 @@ const ExpandedDate: FC = (props) => {
   return (
     <section css={expandedDateStyle} {...props}>
       <CloseButton onClick={onClose} />
-      {format(expandedDate, `EEEE, MMMM io`)}
+      {format(expandedDate, `EEEE, MMMM do`)}
       <br />
       {expandedDate.getFullYear()}
     </section>

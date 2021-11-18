@@ -28,14 +28,16 @@ interface CalendarDayProps {
 }
 
 export const CalendarDay: FC<CalendarDayProps> = ({ day, ...props }) => {
-  const date = new Date();
-  date.setDate(day!);
+  const { date } = useCalendarContext()!;
+
+  const d = new Date(date);
+  d.setDate(day!);
 
   const { setExpandedDate } = useCalendarContext()!;
 
   const isExpandable = !!day;
 
-  const onClick = () => isExpandable && setExpandedDate(date);
+  const onClick = () => isExpandable && setExpandedDate(d);
 
   const styles = [calendarDay, isExpandable && expandableDay];
 
