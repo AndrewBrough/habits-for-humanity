@@ -9,9 +9,8 @@ const closeBtn = css`
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 2rem;
+  padding: 1.125rem;
   line-height: 0;
-  border-radius: 5rem;
 `;
 
 const CloseButton: FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = (

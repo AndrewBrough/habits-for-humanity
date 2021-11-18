@@ -12,8 +12,14 @@ export const resets = {
       vertical-align: inherit;
       appearance: none;
       display: flex;
+      transform: scale(1);
+      transition: all 0.2s ease-in-out;
+      &:focus,
+      &:hover {
+        transform: scale(1.1);
+      }
       &:active {
-        ${borders.paperBorder};
+        transform: scale(0.9);
       }
     `,
   },

@@ -12,12 +12,12 @@ const calendarDay = css`
   background: white;
   padding: 0.5rem;
   /* border-radius: 0.5rem; */
-  transition: all 0.1s ease-in-out;
 
   &:hover,
   &:focus {
-    ${shadows.hoverShadow}
-    transform: scale(1.1);
+    ${shadows.paperShadow};
+    transform: scale(1.05);
+    z-index: 1;
   }
 `;
 
