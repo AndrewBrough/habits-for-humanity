@@ -16,7 +16,7 @@ const CalendarDays: FC = (props) => {
       const key = `calendarDay-${i}`;
       const dateText = getDayText(i);
       return (
-        <CalendarDay key={key} day={dateText as number}>
+        <CalendarDay key={key} day={parseInt(dateText as string)}>
           {dateText}
         </CalendarDay>
       );

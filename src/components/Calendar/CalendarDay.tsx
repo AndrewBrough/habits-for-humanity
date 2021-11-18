@@ -11,7 +11,10 @@ const calendarDay = css`
   height: calc(100vw / 7 - 0.125rem);
   background: white;
   padding: 0.5rem;
+  transform: scale(1) !important;
+`;
 
+const expandableDay = css`
   &:hover,
   &:focus {
     ${shadows.paperShadow};
@@ -30,9 +33,11 @@ export const CalendarDay: FC<CalendarDayProps> = ({ day, ...props }) => {
 
   const { setExpandedDate } = useCalendarContext()!;
 
-  const onClick = () => {
-    setExpandedDate(date);
-  };
+  const isExpandable = !!day;
 
-  return <button css={calendarDay} onClick={onClick} {...props} />;
+  const onClick = () => isExpandable && setExpandedDate(date);
+
+  const styles = [calendarDay, isExpandable && expandableDay];
+
+  return <button css={styles} onClick={onClick} {...props} />;
 };
