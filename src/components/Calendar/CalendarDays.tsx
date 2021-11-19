@@ -12,7 +12,7 @@ const CalendarDays: FC = (props) => {
   };
 
   const renderDaySquares = () => {
-    return new Array(6 * 8 + 1).fill("").map((d, i) => {
+    return [...new Array(6 * 8 + 1)].map((d, i) => {
       const key = `calendarDay-${i}`;
       const dateText = getDayText(i);
       return (
