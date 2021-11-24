@@ -4,6 +4,7 @@ import { format } from "date-fns";
 import { FC } from "react";
 import { paper } from "../../styles/paper";
 import { colors } from "../../variables/colors";
+import { breakpoints } from "../../variables/dimensions";
 import { useCalendarContext } from "../Calendar/useCalendarContext";
 import { CloseButton } from "../CloseButton/CloseButton";
 
@@ -23,8 +24,9 @@ const expandedDateStyle = css`
 
   ${paper}
 
-  animation: open 0.2s ease-in-out forwards;
+  ${breakpoints.tabletOnly}
 
+  animation: open 0.2s ease-in-out forwards;
   @keyframes open {
     0% {
       transform: scale(0.5);
